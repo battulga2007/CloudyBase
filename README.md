@@ -1,3 +1,3 @@
 # Live Demo
 
-🌐 https://battulga2007.github.io/cloudybase/
+🌐 https://battulga2007.github.io/CloudyBase/
