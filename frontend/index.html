@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Search -->
+
+        <header class="search-section">
+
+            <h1>CloudyBase</h1>
+
+            <p>Beautiful forecasts, built for simplicity.</p>
+
+            <div class="search-bar">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search a city...">
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Current Weather -->
+
+        <section class="current-weather card">
+
+            <h2 id="cityName">Tokyo</h2>
+
+            <p class="date">
+                Monday, July 13
+            </p>
+
+            <div class="temperature">
+
+                <div class="weather-icon">
+                    ☀️
+                </div>
+
+                <h3 id="temperature">
+                    26°
+                </h3>
+
+                <p id="condition">
+                    Clear Sky
+                </p>
+
+                <p class="high-low">
+                    H: 29° &nbsp;&nbsp; L: 18°
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weather Details -->
+
+        <section class="weather-details">
+
+            <div class="card detail-card">
+
+                <h4>Feels Like</h4>
+
+                <p id="feelsLike">
+                    28°
+                </p>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <h4>Humidity</h4>
+
+                <p id="humidity">
+                    63%
+                </p>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <h4>Wind</h4>
+
+                <p id="wind">
+                    14 km/h
+                </p>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <h4>Pressure</h4>
+
+                <p id="pressure">
+                    1012 hPa
+                </p>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <h4>Visibility</h4>
+
+                <p id="visibility">
+                    10 km
+                </p>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <h4>UV Index</h4>
+
+                <p id="uv">
+                    4
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Future Forecast -->
+
+        <section class="forecast card">
+
+            <h2>
+                7-Day Forecast
+            </h2>
+
+            <div class="forecast-list">
+
+                <div class="forecast-item">
+
+                    <div class="forecast-day">
+
+                        <span class="forecast-icon">☀️</span>
+
+                        <span>Today</span>
+
+                    </div>
+
+                    <div style="opacity: .45">
+                       ━━━━━━●━━━━━━
+                    </div>
+
+                    <div class="forecast-temp">
+
+                        18° / 29°
+
+                    </div>
+
+</div>
+
+                <div class="forecast-item">
+
+                    <div class="forecast-day">
+
+                        <span class="forecast-icon">🌤</span>
+
+                        <span>Tuesday</span>
+
+                    </div>
+
+                    <div style="opacity: .45">
+                        ━━━━━━━━━━━━━
+                    </div>
+
+                    <div class="forecast-temp">
+
+                        20° / 31°
+
+                    </div>
+
+                </div>
+
+                <div class="forecast-item">
+
+                    <div class="forecast-day">
+
+                        <span class="forecast-icon">🌧</span>
+
+                        <span>Wednesday</span>
+
+                    </div>
+
+                    <div style="opacity: .45">
+                        ━━━━━━━━━━━━━
+                    </div>
+
+                    <div class="forecast-temp">
+
+                        17° / 24°
+
+                    </div>
+
+
+                </div>
+
+                <div class="forecast-item">
+
+                    <div class="forecast-day">
+
+                        <span class="forecast-icon">⛈</span>
+
+                        <span>Thursday</span>
+
+                    </div>
+
+                    <div style="opacity: .45">
+                        ━━━━━━━━━━━━━
+                    </div>
+
+                    <div class="forecast-temp">
+
+                        18° / 22°
+
+                    </div>
+
+                </div>
+
+                <div class="forecast-item">
+
+                    <div class="forecast-day">
+
+                        <span class="forecast-icon">🌤</span>
+
+                        <span>Friday</span>
+
+                    </div>
+
+                    <div style="opacity: .45">
+                        ━━━━━━━━━━━━━
+                    </div>
+
+                    <div class="forecast-temp">
+
+                        21° / 30°
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

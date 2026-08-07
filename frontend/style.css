@@ -1,0 +1,342 @@
+/* ============================
+   GLOBAL
+============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: #10131a;
+    color: #ffffff;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+}
+
+/* ============================
+   LAYOUT
+============================ */
+
+.container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+/* ============================
+   SHARED CARD STYLE
+============================ */
+
+.card {
+
+    background: #1b2029;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+}
+
+/* ============================
+   SEARCH
+============================ */
+
+.search-section {
+
+    text-align: center;
+
+}
+
+.search-section h1 {
+
+    font-size: 2.7rem;
+    font-weight: 700;
+
+}
+
+.search-section p {
+
+    color: #9aa5b1;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+}
+
+.search-bar {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+.search-bar input {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background: #272d38;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: white;
+
+    padding: 14px 18px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+}
+
+.search-bar button {
+
+    background: #3b82f6;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 16px 24px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .25s;
+
+}
+
+.search-bar button:hover {
+
+    background: #2563eb;
+
+    transform: translateY(-2px);
+
+    transition: 0.2s;
+
+}
+
+/* ============================
+   CURRENT WEATHER
+============================ */
+
+.current-weather {
+
+    text-align: center;
+
+}
+
+.current-weather h2 {
+
+    font-size: 2rem;
+
+}
+
+.date {
+
+    color: #9aa5b1;
+
+    margin-top: 8px;
+
+}
+
+.weather-icon {
+
+    font-size: 4.5rem;
+
+    margin-top: 25px;
+
+}
+
+.temperature h3 {
+
+    font-size: 5rem;
+
+    font-weight: 200;
+
+    margin-top: 15px;
+
+}
+
+.temperature p {
+
+    margin-top: 10px;
+
+}
+
+.high-low {
+
+    color: #9aa5b1;
+
+}
+
+/* ============================
+   DETAILS GRID
+============================ */
+
+.weather-details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(170px,1fr));
+
+    gap: 18px;
+
+}
+
+.detail-card {
+
+    text-align: center;
+
+}
+
+.detail-card h4 {
+
+    color: #9aa5b1;
+
+    font-weight: 500;
+
+}
+
+.detail-card p {
+
+    margin-top: 15px;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+}
+
+/* ============================
+   FORECAST
+============================ */
+
+.forecast h2 {
+
+    margin-bottom: 20px;
+
+}
+
+.forecast-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.forecast-item {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 14px 18px;
+
+    background: #272d38;
+
+    border-radius: 14px;
+
+    transition: 0.25s;
+}
+
+.forecast-day {
+
+    justify-self: start;
+
+    font-weight: 500;
+}
+
+.forecast-icon {
+
+    justify-self: center;
+
+    font-size: 1.3rem;
+}
+
+.forecast-temp {
+
+    justify-self: end;
+
+    font-weight: 500;
+}
+
+.forecast-item:hover {
+
+    background: #323946;
+
+    transform: translateY(-2px);
+
+    transition: 0.2s;
+}
+
+.forecast-item span:nth-child(2){
+
+    justify-self:center;
+
+    font-size:1.2rem;
+
+}
+
+.forecast-item span:last-child{
+
+    justify-self:end;
+
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width:700px){
+
+.search-bar{
+
+    flex-direction:column;
+
+}
+
+.search-bar input{
+
+    max-width:none;
+
+}
+
+.temperature h3{
+
+    font-size:4rem;
+
+}
+
+}
