@@ -36,6 +36,16 @@ body {
 
 }
 
+#weather-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#weather-dashboard.hidden {
+    display: none;
+}
+
 /* ============================
    SHARED CARD STYLE
 ============================ */
