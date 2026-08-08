@@ -1,6 +1,7 @@
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("searchButton");
 const locationResults = document.getElementById("location-results");
+const API_URL = "https://YOUR-ACTUAL-BACKEND.onrender.com"
 
 let selectedLocation = null;
 
@@ -25,8 +26,7 @@ searchInput.addEventListener("input", () => {
 // Ask FastAPI for locations matching the user's query.
 async function searchLocations(query) {
     const response = await fetch(
-        `http://127.0.0.1:8000/locations/search?q=${encodeURIComponent(query)}`
-    );
+    `${API_URL}/locations/search?q=${encodeURIComponent(query)}`);
 
     const data = await response.json();
 
@@ -80,8 +80,7 @@ searchButton.addEventListener("click", () => {
 // To get forecast data of Search button
 async function getWeather(location) {
     const response = await fetch(
-        `http://127.0.0.1:8000/weather?latitude=${location.latitude}&longitude=${location.longitude}`
-    );
+    `${API_URL}/weather?latitude=${location.latitude}&longitude=${location.longitude}`);
 
     const data = await response.json();
 
