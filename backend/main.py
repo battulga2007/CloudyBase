@@ -8,7 +8,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5500",
+        "https://battulga2007.github.io",
     ],
     allow_credentials=True,
     allow_methods=["*"],
