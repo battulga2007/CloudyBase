@@ -266,28 +266,41 @@ body {
 
 .temperature-track {
     position: relative;
+
     width: 100%;
-    max-width: 200px;
-    justify-self: center;
+
+    max-width: 260px;
+
     height: 4px;
+
     background: rgba(255, 255, 255, 0.35);
+    
     border-radius: 999px;
 }
 
 .temperature-range {
     position: absolute;
+
     height: 4px;
+
     background: rgba(255, 255, 255, 0.7);
+
     border-radius: 999px;
 }
 
 .current-temperature-dot {
     position: absolute;
+
     top: 50%;
+
     width: 8px;
+
     height: 8px;
+
     background: #999;
+
     border-radius: 50%;
+
     transform: translate(-50%, -50%);
 }
 
@@ -358,6 +371,8 @@ body {
 
     align-items: center;
 
+    gap: 12px;
+
     padding: 14px 18px;
 
     background: #272d38;
@@ -418,7 +433,6 @@ body {
 @media (max-width: 700px) {
 
     .forecast-item {
-        grid-template-columns: max-content minmax(0, 1fr) max-content;
         gap: 12px;
     }
 
