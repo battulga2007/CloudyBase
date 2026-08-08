@@ -271,10 +271,12 @@ body {
 
     max-width: 260px;
 
+    justify-self: center;
+
     height: 4px;
 
     background: rgba(255, 255, 255, 0.35);
-    
+
     border-radius: 999px;
 }
 
@@ -364,7 +366,6 @@ body {
 }
 
 .forecast-item {
-
     display: grid;
 
     grid-template-columns: max-content minmax(0, 1fr) max-content;
