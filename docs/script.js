@@ -1,7 +1,7 @@
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("searchButton");
 const locationResults = document.getElementById("location-results");
-const API_URL = "https://YOUR-ACTUAL-BACKEND.onrender.com"
+const API_URL = "https://cloudybase.onrender.com"
 
 let selectedLocation = null;
 
