@@ -33,12 +33,17 @@
 
                 <input
                     type="text"
-                    id="cityInput"
-                    placeholder="Search a city...">
+                    id="search-input"
+                    placeholder="Search a city..."
+                    autocomplete="off"
+                >
+
 
                 <button id="searchButton">
                     Search
                 </button>
+
+                <div id="location-results"></div>
 
             </div>
 
@@ -51,7 +56,7 @@
 
             <h2 id="cityName">Tokyo</h2>
 
-            <p class="date">
+            <p id="date">
                 Monday, July 13
             </p>
 
@@ -69,7 +74,7 @@
                     Clear Sky
                 </p>
 
-                <p class="high-low">
+                <p id = "high-low" class="high-low">
                     H: 29° &nbsp;&nbsp; L: 18°
                 </p>
 
@@ -150,14 +155,14 @@
         <section class="forecast card">
 
             <h2>
-                7-Day Forecast
+                5-Day Forecast
             </h2>
 
             <div class="forecast-list">
 
                 <div class="forecast-item">
 
-                    <div class="forecast-day">
+                    <div class="forecast-day" class="forecast-list">
 
                         <span class="forecast-icon">☀️</span>
 
@@ -166,7 +171,6 @@
                     </div>
 
                     <div style="opacity: .45">
-                       ━━━━━━●━━━━━━
                     </div>
 
                     <div class="forecast-temp">
@@ -187,8 +191,7 @@
 
                     </div>
 
-                    <div style="opacity: .45">
-                        ━━━━━━━━━━━━━
+                    <div style="opacity: .45" class="forecast-list">
                     </div>
 
                     <div class="forecast-temp">
@@ -209,8 +212,7 @@
 
                     </div>
 
-                    <div style="opacity: .45">
-                        ━━━━━━━━━━━━━
+                    <div style="opacity: .45" class="forecast-list">
                     </div>
 
                     <div class="forecast-temp">
@@ -232,8 +234,7 @@
 
                     </div>
 
-                    <div style="opacity: .45">
-                        ━━━━━━━━━━━━━
+                    <div style="opacity: .45" class="forecast-list">
                     </div>
 
                     <div class="forecast-temp">
@@ -254,8 +255,7 @@
 
                     </div>
 
-                    <div style="opacity: .45">
-                        ━━━━━━━━━━━━━
+                    <div style="opacity: .45" class="forecast-list">
                     </div>
 
                     <div class="forecast-temp">

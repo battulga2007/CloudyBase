@@ -141,6 +141,65 @@ body {
 
 }
 
+#location-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    background: #1c222d;
+    border: 1px solid #303847;
+    border-radius: 16px;
+
+    padding: 6px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+#location-results div {
+    padding: 12px 14px;
+
+    color: #f5f7fa;
+    font-size: 15px;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+#location-results div:hover {
+    background: #2a3240;
+    transform: translateX(2px);
+
+}
+
+.search-bar {
+    position: relative;
+}
+
+#location-results .no-results {
+    color: #8f98a8;
+    cursor: default;
+    padding: 12px 14px;
+}
+
+#location-results .no-results:hover {
+    background: transparent;
+    transform: none;
+}
+
+#location-results:empty {
+    display: none;
+}
+
 /* ============================
    CURRENT WEATHER
 ============================ */
@@ -193,6 +252,32 @@ body {
 
     color: #9aa5b1;
 
+}
+
+.temperature-track {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+}
+
+.temperature-range {
+    position: absolute;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+}
+
+.current-temperature-dot {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: #999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ============================
@@ -319,24 +404,33 @@ body {
    MOBILE
 ============================ */
 
-@media (max-width:700px){
+@media (max-width: 700px) {
 
-.search-bar{
+    .forecast-item {
+        grid-template-columns: max-content minmax(0, 1fr) max-content;
+        gap: 12px;
+    }
 
-    flex-direction:column;
+    .forecast-day {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        white-space: nowrap;
+    }
 
-}
+    .forecast-icon {
+        font-size: 1.15rem;
+        flex-shrink: 0;
+    }
 
-.search-bar input{
+    .temperature-track {
+        width: 100%;
+        max-width: none;
+    }
 
-    max-width:none;
-
-}
-
-.temperature h3{
-
-    font-size:4rem;
-
-}
-
+    .forecast-temp {
+        white-space: nowrap;
+        text-align: right;
+        font-size: 0.9rem;
+    }
 }
