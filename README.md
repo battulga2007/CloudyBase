@@ -169,12 +169,6 @@ The result is a small but complete full-stack project that demonstrates how thes
 
 ---
 
-## 📸 Screenshots
-
-_Add desktop and mobile screenshots here._
-
----
-
 ## 📜 License
 
 CloudyBase is currently released under the **[choose your license here]** license.
