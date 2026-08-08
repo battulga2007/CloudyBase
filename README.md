@@ -171,4 +171,4 @@ The result is a small but complete full-stack project that demonstrates how thes
 
 ## 📜 License
 
-CloudyBase is currently released under the **[choose your license here]** license.
+CloudyBase is currently released under the **MIT** license.
