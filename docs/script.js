@@ -92,6 +92,9 @@ async function getWeather(location) {
 
 function displayWeather(data, location) {
 
+    // Enable Dashboard 
+    document.getElementById("weather-dashboard").classList.remove("hidden");
+
     // City
     document.getElementById("cityName").textContent =
         location.name;
