@@ -1,3 +1,4 @@
+const saveButton = document.getElementById("saveButton");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("searchButton");
 const locationResults = document.getElementById("location-results");
@@ -333,3 +334,24 @@ function displayWeather(data, location) {
     forecastList.appendChild(forecastItem);
 }
 }
+
+// To send a city to FastAPI
+saveButton.addEventListener("click", async () => {
+
+    if (!selectedLocation) {
+        return;
+    }
+
+    const city = selectedLocation.name;
+
+    const response = await fetch(
+        `${API_URL}/test/city?city=${encodeURIComponent(city)}`,
+        {
+            method: "POST"
+        }
+    );
+
+    const data = await response.json();
+
+    console.log("Saved:", data);
+});

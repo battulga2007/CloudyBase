@@ -1,8 +1,20 @@
+import os
+import psycopg
 from fastapi import FastAPI
 import httpx
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# To get Database connection for PostgreSQL
+def get_db_connection():
+    return psycopg.connect(
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT"),
+        dbname=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD")
+    )
 
 # To allow multiple origins, you can specify them in the allow_origins list.
 app.add_middleware(
@@ -114,3 +126,20 @@ async def get_weather(
 
     # Return the weather data to the frontend.
     return data
+
+
+# To save a city to the database
+@app.post("/test/city")
+def save_city(city: str):
+    connection = get_db_connection()
+
+    with connection:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                "INSERT INTO test_cities (city) VALUES (%s)",
+                (city,)
+            )
+
+    connection.close()
+
+    return {"message": "City saved", "city": city}
