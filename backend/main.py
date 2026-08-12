@@ -42,8 +42,7 @@ def root():
 
 @app.get("/locations/search")
 async def search_locations(q: str):
-    # Search Open-Meteo's geocoding service for locations matching
-    # the text entered by the user.
+    # Search Open-Meteo's geocoding service for locations matching the query added by user.
     geocoding_url = "https://geocoding-api.open-meteo.com/v1/search"
 
     # Assigning the query parameters to a dictionary
@@ -54,7 +53,7 @@ async def search_locations(q: str):
         "format": "json"
     }
 
-    # Fetching the data from the API
+    # Fetching the data from the geocoding API
     async with httpx.AsyncClient() as client:
         response = await client.get(
             geocoding_url,
@@ -73,6 +72,7 @@ async def search_locations(q: str):
 
     # Looping to extract results
     for location in data["results"]:
+
         locations.append({
             "id": location["id"],
             "name": location["name"],
@@ -129,7 +129,7 @@ async def get_weather(
     # Convert the API response into JSON.
     data = response.json()
 
-    # Return the weather data to the frontend.
+    # Return the weather data to the frontend. (Ok, why did i actually comment this, was i lowk stupid during that time haha.)
     return data
 
 
