@@ -103,7 +103,7 @@ async def get_weather(
         "apparent_temperature,"
         "relative_humidity_2m,"
         "wind_speed_10m,"
-        "surface_pressure,"
+        "pressure_msl,"
         "visibility,"
         "uv_index,"
         "weather_code"
