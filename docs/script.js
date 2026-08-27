@@ -212,7 +212,7 @@ function displayWeather(data, location) {
 
     // Pressure
     document.getElementById("pressure").textContent =
-        `${data.current.surface_pressure} hPa`;
+        `${data.current.pressure_msl} hPa`;
 
     // Visibility
     document.getElementById("visibility").textContent =
